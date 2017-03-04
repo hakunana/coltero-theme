@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+
+  humhub_mysql:
+    image: mysql:5.7
+    env_file:
+      - mysql/mysql.env
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./mysql/humhub.cnf:/etc/mysql/conf.d/humhub.cnf
+
+  humhub_etherpad:
+    env_file:
+      - etherpad/etherpad.env
+    build:
+      context: ./etherpad
+    ports:
+      - "9001:9001"
+    volumes:
+      - etherpad:/opt/etherpad-lite/var
+
+  humhub_web:
+    build:
+      context: ./humhub
+    ports:
+      - "8081:80"
+    links:
+      - humhub_mysql
+      - humhub_etherpad
+    volumes:
+      - ../:/humhub
+
+volumes:
+  mysql:
+    driver: local
+
+  etherpad:
+    driver: local
