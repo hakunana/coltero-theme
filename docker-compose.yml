@@ -29,7 +29,7 @@ services:
       - humhub_mysql
       - humhub_etherpad
     volumes:
-      - .humhub/src/:/humhub
+      - ./humhub/src/:/humhub
 
 volumes:
 
