@@ -7,7 +7,7 @@ services:
     env_file:
       - ./mysql/mysql.env
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql/volume:/var/lib/mysql
       - ./mysql/humhub.cnf:/etc/mysql/conf.d/humhub.cnf
 
   humhub_etherpad:
@@ -18,7 +18,7 @@ services:
     ports:
       - "9001:9001"
     volumes:
-      - etherpad:/opt/etherpad-lite/var
+      - etherpad/volume:/opt/etherpad-lite/var
 
   humhub_web:
     build:
