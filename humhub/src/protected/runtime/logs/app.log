@@ -1,0 +1,1390 @@
+2017-03-24 16:32:18 [172.18.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:630
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(630): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('user')
+#6 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#7 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#8 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#9 /humhub/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#10 /humhub/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#11 /humhub/protected/humhub/libs/BaseSettingsManager.php(166): yii\db\ActiveQuery->all()
+#12 /humhub/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#13 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#14 [internal function]: yii\base\Object->__construct(Array)
+#15 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#16 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#17 /humhub/protected/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('humhub\\componen...', Array, Array)
+#18 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#19 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#20 /humhub/protected/humhub/modules/user/components/User.php(181): yii\di\ServiceLocator->__get('settings')
+#21 /humhub/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#22 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#23 /humhub/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#24 /humhub/protected/humhub/components/Controller.php(221): humhub\widgets\BaseMenu::setViewState()
+#25 /humhub/protected/humhub/components/Controller.php(142): humhub\components\Controller->setJsViewStatus()
+#26 /humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#27 /humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('go', Array)
+#28 /humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/index...', Array)
+#29 /humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#30 /humhub/index.php(25): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:568
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('user')
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#6 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /humhub/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#8 /humhub/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 /humhub/protected/humhub/libs/BaseSettingsManager.php(166): yii\db\ActiveQuery->all()
+#10 /humhub/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#11 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#12 [internal function]: yii\base\Object->__construct(Array)
+#13 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#14 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#15 /humhub/protected/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('humhub\\componen...', Array, Array)
+#16 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#17 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#18 /humhub/protected/humhub/modules/user/components/User.php(181): yii\di\ServiceLocator->__get('settings')
+#19 /humhub/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#20 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#21 /humhub/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#22 /humhub/protected/humhub/components/Controller.php(221): humhub\widgets\BaseMenu::setViewState()
+#23 /humhub/protected/humhub/components/Controller.php(142): humhub\components\Controller->setJsViewStatus()
+#24 /humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 /humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('go', Array)
+#26 /humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/index...', Array)
+#27 /humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#28 /humhub/index.php(25): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-03-24 16:32:17 [172.18.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/index/go'
+    '_pjax' => '#layout-content'
+    '_' => '1490373134382'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'N0MxRDM3aWEBLFkDUkBfNVM1WnJwZTpRQTBcEn9/KDNOB1w9QkBEAw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=installer%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; _csrf=e11cf3804b8b9c273ef9f37d7a3cdb4fd455f4e8f83fe02fac66e6452ed54887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226ohGaw6Tdvk6CRS0vsmVLHARyDmyqw-b%22%3B%7D; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '50744'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1490373134382'
+    'REQUEST_URI' => '/index.php?r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1490373134382'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490373136.89
+    'REQUEST_TIME' => 1490373136
+]
+2017-03-24 16:32:18 [172.18.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' 
+
+in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:568
+
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(832): yii\db\Command->getRawSql()
+#6 /humhub/protected/vendor/yiisoft/yii2/log/DbTarget.php(83): yii\db\Command->execute()
+#7 /humhub/protected/vendor/yiisoft/yii2/log/Target.php(124): yii\log\DbTarget->export()
+#8 /humhub/protected/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\log\Target->collect(Array, true)
+#9 /humhub/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#10 /humhub/protected/vendor/yiisoft/yii2/base/ErrorHandler.php(113): yii\log\Logger->flush(true)
+#11 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#12 {main}
+2017-03-24 16:32:17 [172.18.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/index/go'
+    '_pjax' => '#layout-content'
+    '_' => '1490373134382'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'N0MxRDM3aWEBLFkDUkBfNVM1WnJwZTpRQTBcEn9/KDNOB1w9QkBEAw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=installer%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; _csrf=e11cf3804b8b9c273ef9f37d7a3cdb4fd455f4e8f83fe02fac66e6452ed54887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226ohGaw6Tdvk6CRS0vsmVLHARyDmyqw-b%22%3B%7D; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '50744'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1490373134382'
+    'REQUEST_URI' => '/index.php?r=installer%2Findex%2Fgo&_pjax=%23layout-content&_=1490373134382'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490373136.89
+    'REQUEST_TIME' => 1490373136
+]
+2017-03-24 16:32:26 [172.18.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:630
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(630): PDO->__construct('mysql:host=loca...', '', '', NULL)
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('user')
+#6 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#7 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#8 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#9 /humhub/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#10 /humhub/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#11 /humhub/protected/humhub/libs/BaseSettingsManager.php(166): yii\db\ActiveQuery->all()
+#12 /humhub/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#13 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#14 [internal function]: yii\base\Object->__construct(Array)
+#15 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#16 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#17 /humhub/protected/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('humhub\\componen...', Array, Array)
+#18 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#19 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#20 /humhub/protected/humhub/modules/user/components/User.php(181): yii\di\ServiceLocator->__get('settings')
+#21 /humhub/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#22 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#23 /humhub/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#24 /humhub/protected/humhub/components/Controller.php(221): humhub\widgets\BaseMenu::setViewState()
+#25 /humhub/protected/humhub/components/Controller.php(142): humhub\components\Controller->setJsViewStatus()
+#26 /humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#27 /humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('database', Array)
+#28 /humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/setup...', Array)
+#29 /humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#30 /humhub/index.php(25): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:568
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('user')
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('user')
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#6 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /humhub/protected/vendor/yiisoft/yii2/db/Query.php(213): yii\db\Command->queryAll()
+#8 /humhub/protected/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 /humhub/protected/humhub/libs/BaseSettingsManager.php(166): yii\db\ActiveQuery->all()
+#10 /humhub/protected/humhub/libs/BaseSettingsManager.php(47): humhub\libs\BaseSettingsManager->loadValues()
+#11 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\libs\BaseSettingsManager->init()
+#12 [internal function]: yii\base\Object->__construct(Array)
+#13 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#14 /humhub/protected/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('humhub\\componen...', Array, Array)
+#15 /humhub/protected/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('humhub\\componen...', Array, Array)
+#16 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#17 /humhub/protected/vendor/yiisoft/yii2/di/ServiceLocator.php(73): yii\di\ServiceLocator->get('settings')
+#18 /humhub/protected/humhub/modules/user/components/User.php(181): yii\di\ServiceLocator->__get('settings')
+#19 /humhub/protected/humhub/widgets/TopMenu.php(41): humhub\modules\user\components\User::isGuestAccessEnabled()
+#20 /humhub/protected/vendor/yiisoft/yii2/base/Object.php(107): humhub\widgets\TopMenu->init()
+#21 /humhub/protected/humhub/widgets/BaseMenu.php(316): yii\base\Object->__construct()
+#22 /humhub/protected/humhub/components/Controller.php(221): humhub\widgets\BaseMenu::setViewState()
+#23 /humhub/protected/humhub/components/Controller.php(142): humhub\components\Controller->setJsViewStatus()
+#24 /humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#25 /humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('database', Array)
+#26 /humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('installer/setup...', Array)
+#27 /humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#28 /humhub/index.php(25): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-03-24 16:32:25 [172.18.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/setup/database'
+    '_pjax' => '#layout-content'
+    '_' => '1490373140942'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'VTRKdWpTUjJjWyIyCyRkZjFCIUMpAQECI0cnIyYbE2AscCcMGyR/UA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=installer%2Fsetup%2Fprerequisites'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; _csrf=e11cf3804b8b9c273ef9f37d7a3cdb4fd455f4e8f83fe02fac66e6452ed54887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226ohGaw6Tdvk6CRS0vsmVLHARyDmyqw-b%22%3B%7D; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '50746'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1490373140942'
+    'REQUEST_URI' => '/index.php?r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1490373140942'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490373145.835
+    'REQUEST_TIME' => 1490373145
+]
+2017-03-24 16:32:26 [172.18.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\log\DbTarget: Exception (Database Exception) 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' 
+
+in /humhub/protected/vendor/yiisoft/yii2/db/Connection.php:568
+
+Stack trace:
+#0 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#1 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 /humhub/protected/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /humhub/protected/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('yii\\db\\Exceptio...')
+#4 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('yii\\db\\Exceptio...')
+#5 /humhub/protected/vendor/yiisoft/yii2/db/Command.php(832): yii\db\Command->getRawSql()
+#6 /humhub/protected/vendor/yiisoft/yii2/log/DbTarget.php(83): yii\db\Command->execute()
+#7 /humhub/protected/vendor/yiisoft/yii2/log/Target.php(124): yii\log\DbTarget->export()
+#8 /humhub/protected/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\log\Target->collect(Array, true)
+#9 /humhub/protected/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#10 /humhub/protected/vendor/yiisoft/yii2/base/ErrorHandler.php(113): yii\log\Logger->flush(true)
+#11 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#12 {main}
+2017-03-24 16:32:25 [172.18.0.1][-][-][info][application] $_GET = [
+    'r' => 'installer/setup/database'
+    '_pjax' => '#layout-content'
+    '_' => '1490373140942'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'VTRKdWpTUjJjWyIyCyRkZjFCIUMpAQECI0cnIyYbE2AscCcMGyR/UA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=installer%2Fsetup%2Fprerequisites'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; _csrf=e11cf3804b8b9c273ef9f37d7a3cdb4fd455f4e8f83fe02fac66e6452ed54887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226ohGaw6Tdvk6CRS0vsmVLHARyDmyqw-b%22%3B%7D; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '50746'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1490373140942'
+    'REQUEST_URI' => '/index.php?r=installer%2Fsetup%2Fdatabase&_pjax=%23layout-content&_=1490373140942'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490373145.835
+    'REQUEST_TIME' => 1490373145
+]
+2017-03-24 16:38:12 [172.18.0.1][1][-][warning][yii\i18n\I18N::format] Formatting message for language 'de' failed with error: Message pattern is invalid: msgfmt_create: message formatter creation failed: U_DEFAULT_KEYWORD_MISSING. The message being formatted was: Dieses Feld erlaubt nur das Hochladen von maximal {n,plural,=1{# file} weiteren {# files}}.
+.
+    in /humhub/protected/humhub/components/i18n/I18N.php:201
+    in /humhub/protected/humhub/components/i18n/I18N.php:116
+    in /humhub/protected/humhub/modules/file/widgets/UploadInput.php:143
+2017-03-24 16:38:10 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'normal'
+    'StreamQuery' => [
+        'sort' => 'c'
+        'from' => '0'
+        'limit' => '8'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'enN1aUlQU2oeMCYCPSk5DU8UNCwgKRYwAxxCDyAUKjpNEQQxDWQhEA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; PHPSESSID=qlhk4rmkq4dqfu8chth3uddsb7; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '50874'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490373490.888
+    'REQUEST_TIME' => 1490373490
+]
+2017-03-24 18:37:05 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490374233 Now: 1490380625
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 18:37:05 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490374233'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; PHPSESSID=qlhk4rmkq4dqfu8chth3uddsb7; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51172'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490374233'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490374233'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490380625.315
+    'REQUEST_TIME' => 1490380625
+]
+2017-03-24 19:00:11 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490380695 Now: 1490382011
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 18:44:20 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490380695'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=c790s7sm922q63evsqupj0fe44; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51184'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490380695'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490380695'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490381060.84
+    'REQUEST_TIME' => 1490381060
+]
+2017-03-24 19:13:14 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490382011 Now: 1490382794
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 19:13:14 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490382011'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=c790s7sm922q63evsqupj0fe44; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51188'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490382011'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490382011'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490382794.656
+    'REQUEST_TIME' => 1490382794
+]
+2017-03-24 19:50:37 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490382794 Now: 1490385037
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 19:50:36 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490382794'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=c790s7sm922q63evsqupj0fe44; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51192'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490382794'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490382794'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490385036.884
+    'REQUEST_TIME' => 1490385036
+]
+2017-03-24 21:46:36 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490384776 Now: 1490391996
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 21:46:35 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490384776'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=jqvjljht6267kinhid6h13smq0; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51200'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490384776'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490384776'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490391995.24
+    'REQUEST_TIME' => 1490391995
+]
+2017-03-24 22:07:24 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490391996 Now: 1490393244
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-24 22:07:24 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490391996'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=8ujnlsvas0r7bp8dr4h0ar0rv6; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490391996'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490391996'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490393244.272
+    'REQUEST_TIME' => 1490393244
+]
+2017-03-25 00:07:49 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490393244 Now: 1490400469
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-25 00:07:48 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490393244'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=8ujnlsvas0r7bp8dr4h0ar0rv6; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51208'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490393244'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490393244'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490400468.499
+    'REQUEST_TIME' => 1490400468
+]
+2017-03-25 01:21:09 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490400469 Now: 1490404869
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-25 01:21:08 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490400469'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=hkgvg34m9lb22l1cn7ips23q23; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '51212'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490400469'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490400469'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490404868.836
+    'REQUEST_TIME' => 1490404868
+]
+2017-03-25 12:13:28 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490441865 Now: 1490444008
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-25 12:13:27 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490441865'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=e5mkids3n8fn9a3kii54au5ll5; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '54232'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490441865'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490441865'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490444007.897
+    'REQUEST_TIME' => 1490444007
+]
+2017-03-25 14:07:16 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490450020 Now: 1490450836
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-25 14:07:15 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490450020'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=2o5lvajhrd7rsq067ft7jhsdm5; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '54716'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490450020'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490450020'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490450835.586
+    'REQUEST_TIME' => 1490450835
+]
+2017-03-25 16:01:19 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490456885 Now: 1490457679
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-25 16:01:18 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490456885'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=2o5lvajhrd7rsq067ft7jhsdm5; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '55216'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490456885'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490456885'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490457678.932
+    'REQUEST_TIME' => 1490457678
+]
+2017-03-26 05:04:26 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490502679 Now: 1490504666
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 05:04:25 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490502679'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=2o5lvajhrd7rsq067ft7jhsdm5; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '58876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490502679'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490502679'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490504665.191
+    'REQUEST_TIME' => 1490504665
+]
+2017-03-26 11:10:34 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490525024 Now: 1490526634
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 11:10:34 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490525024'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=o91ti7goavp0ivhldjn3aeaff0; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '60588'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490525024'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490525024'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490526634.543
+    'REQUEST_TIME' => 1490526634
+]
+2017-03-26 11:19:59 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490526634 Now: 1490527199
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 11:19:58 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490526634'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=fffdnhq19kkaceq6r8919irkv1; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '60592'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490526634'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490526634'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490527198.945
+    'REQUEST_TIME' => 1490527198
+]
+2017-03-26 12:08:51 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490528035 Now: 1490530131
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 12:08:50 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490528035'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=fffdnhq19kkaceq6r8919irkv1; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '60668'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490528035'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490528035'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490530130.595
+    'REQUEST_TIME' => 1490530130
+]
+2017-03-26 19:51:23 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490553156 Now: 1490557883
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 19:51:22 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490553156'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=1jfh6oenvv2476l1ka9fhki7f6; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '34356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490553156'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490553156'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490557882.963
+    'REQUEST_TIME' => 1490557882
+]
+2017-03-26 22:05:45 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490557987 Now: 1490565945
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-26 22:05:44 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490557987'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=66fesek2b0uhcvap44hhg2kqm1; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '34376'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490557987'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490557987'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490565944.825
+    'REQUEST_TIME' => 1490565944
+]
+2017-03-27 04:53:57 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490565945 Now: 1490590437
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-27 00:54:17 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490565945'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=m0pp2le8dafav00vl8hfm6ad96; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '34380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490565945'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490565945'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490576057.191
+    'REQUEST_TIME' => 1490576057
+]
+2017-03-27 05:53:20 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490590437 Now: 1490593999
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-27 05:53:19 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490590437'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=homu893lfoudaqtv8e378m0rb6; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '34384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490590437'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490590437'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490593999.435
+    'REQUEST_TIME' => 1490593999
+]
+2017-03-27 06:22:12 [172.18.0.1][1][-][warning][live] User requested too old live data! Requested: 1490593999 Now: 1490595732
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:188
+    in /humhub/protected/humhub/modules/live/controllers/PollController.php:77
+2017-03-27 06:22:11 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'live/poll'
+    'last' => '1490593999'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd1RPZjMyeEkTFxwNR0sSLkIzDiNaSz0TDjt4AFp2ARlANj4.dwYKMw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/index.php?r=notes%2Fconfig'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; _pk_id.25.1fff=7eed03075586a479.1474637773.38.1488795348.1488795319.; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; PHPSESSID=ihr793a88jn5f3a7c9uevhrh12; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '34388'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=live%2Fpoll&last=1490593999'
+    'REQUEST_URI' => '/index.php?r=live%2Fpoll&last=1490593999'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1490595731.449
+    'REQUEST_TIME' => 1490595731
+]
+2017-05-05 12:07:49 [172.18.0.1][1][-][warning][yii\i18n\I18N::format] Formatting message for language 'de' failed with error: Message pattern is invalid: msgfmt_create: message formatter creation failed: U_DEFAULT_KEYWORD_MISSING. The message being formatted was: Dieses Feld erlaubt nur das Hochladen von maximal {n,plural,=1{# file} weiteren {# files}}.
+.
+    in /humhub/protected/humhub/components/i18n/I18N.php:201
+    in /humhub/protected/humhub/components/i18n/I18N.php:116
+    in /humhub/protected/humhub/modules/file/widgets/UploadInput.php:143
+2017-05-05 12:07:47 [172.18.0.1][1][-][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'normal'
+    'StreamQuery' => [
+        'sort' => 'c'
+        'from' => '0'
+        'limit' => '8'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://localhost:8081/index.php'
+    'HTTP_HOST' => 'localhost:8081'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'UGNkbVlyc1A0IDcGLQsZN2UEJSgwCzYKKQxTCzA2CgBnARU1HUYBKg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2845.0 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'org.cups.sid=b7ddf87d82899e21c0426936fb8654bb; lastIp=localhost:8080; lastName=hanna; language=dd4fb2d6ae9179eb016da1892a0161d7dc3bad690ec38191c38c6baeb3c8d466a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22de%22%3B%7D; _csrf=2f9534054f17fba95c3b77730a56e77337116e6964d4683a1633c57d067db658a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dCSktyjg5gAEiyEZyo7fiDyP7bqXD4rz%22%3B%7D; pm_getting-started-panel=expanded; express_sid=s%3ABzz_UdtHFbSO6vEgTLgimC2pprrShP4H.iLcJBnmN37%2FF5qnKkbZArT4VBKf7zEESoNUPzyykzL8; _pk_id.25.1fff=7eed03075586a479.1474637773.57.1492602106.1492601456.; PHPSESSID=2knrsk59r40omt3t5u1ukqbo56; _identity=0ab7cd5759d60965090a787b7db8102acd2f0339e8d872fac1a2a5cfc7c4522ca%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22d1831b25-a17c-418f-8893-a64d0b0a1b7a%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Debian) Server at localhost Port 8081</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '172.18.0.4'
+    'SERVER_PORT' => '8081'
+    'REMOTE_ADDR' => '172.18.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/humhub'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '60154'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/index.php?r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1493986067.776
+    'REQUEST_TIME' => 1493986067
+]
